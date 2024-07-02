@@ -1,1 +1,3 @@
 /test.rest
+.env
+node_modules

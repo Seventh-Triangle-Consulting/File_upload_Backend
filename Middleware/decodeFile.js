@@ -17,14 +17,14 @@ export const handleXlsx = async (req, res) => {
     const cellA1 = sheet["A1"];
     console.log(cellA1.v.toLowerCase(),"checking first header")
 
-    if (cellA1 && cellA1.v && cellA1.v.toLowerCase() === "discount codes") {
+    if (cellA1 && cellA1.v && cellA1.v.toLowerCase() === "code") {
       console.log("First column, first row contains 'code'.");
       
     } else {
       console.log("Error: First column, first row does not contain 'code'.");
       return res.status(400).json({
         error: "Invalid file data format",
-        message: "Invalid file data format",
+        message: "Invalid file data format. First column, first row does not contain 'code'.",
       });
     }
 
